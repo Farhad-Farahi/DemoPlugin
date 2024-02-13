@@ -1,0 +1,38 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+
+
+    <id>com.example.demoplugin</id>
+    <version>1.0.0</version>
+
+
+
+    <name>Demoplugin</name>
+    <vendor email="demo@demo.com" url="https://www.yourcompany.com">DemoCompany</vendor>
+    <description>this plugin is for demo.this plugin is for demo.this plugin is for demo</description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+
+    <actions>
+        <action
+                id="com.example.demoplugin.MyDemoAction"
+                class="com.example.demoplugin.MyDemoAction"
+                text="Demo Action"
+                description="Demo action example">
+
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+    </actions>
+
+
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="DemoPlugin"
+                    anchor="bottom"
+                    factoryClass="com.example.demoplugin.MainViewFactory"/>
+    </extensions>
+
+
+
+</idea-plugin>
